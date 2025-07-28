@@ -1,0 +1,41 @@
+<style>
+    @media (max-width: 768px) {
+        .success_flash {
+            margin-top: 5rem !important;
+            margin-bottom: -1px !important;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .error_flash {
+            margin-top: 5rem !important;
+            margin-bottom: -1px !important;
+        }
+    }
+</style>
+
+<% if(success && success.length) { %>
+    <div class="alert alert-success alert-dismissible fade show col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3 col-xxl-6 mt-3 offset-xxl-3 mt-3 success_flash" role="alert">
+        <%= success %>
+        <button 
+        type="button" 
+        class="btn-close"
+        data-bs-dismiss="alert" 
+        aria-label="Close"
+        ></button>
+    </div>
+<% } %>
+
+
+
+<% if(error && error.length) { %>
+    <div class="alert alert-danger alert-dismissible fade show col-12 col-sm-10 offset-sm-1 col-md-8   offset-md-2 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3 col-xxl-6 offset-xxl-3 mt-3 error_flash" role="alert">
+        <%= error %>
+        <button 
+        type="button" 
+        class="btn-close" 
+        data-bs-dismiss="alert" 
+        aria-label="Close"
+        ></button>
+    </div>
+<% } %>

@@ -1,0 +1,245 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar {
+    height: 5rem;
+}
+
+.fa-airbnb {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* Footer */
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+}
+
+.f-info-links, 
+.f-info-socials, 
+.f-info-brand {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+
+.f-info {
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+
+
+/* Cards */
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.card-text p {
+    font-weight: 400 !important;
+}  
+
+.listing-link {
+    text-decoration: none !important;
+}
+
+/* Card Effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* New Page */
+.add-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* Edit Page */
+
+.delete-btn {
+    background-color: #fe424d !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+/* Show page */
+.show-img {
+    width: 80%;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.btns {
+    display: flex;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/* Map */
+#map { 
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Index Page Filter icons */
+
+#filters {
+    align-items: center;
+}
+
+.filter {
+    text-align: center;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+
+.filter:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.filter p {
+    font-size: 0.8rem;
+}
+
+#filters a {
+    text-decoration: none;
+    color: black;
+}
+
+.tax-info {
+    display: none;
+}
+
+.tax-toggle {
+    border: 1px solid black;
+    border-radius: 1rem;
+    height: 3.25rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+  .filters {
+    display: flex !important;
+    overflow-x: auto !important;
+    gap: 1rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  .filters::-webkit-scrollbar {
+    display: none !important; 
+  }
+
+  a .filter {
+    flex: 0 0 auto !important; 
+    text-align: center !important;
+    width: 4rem  !important; 
+  }
+}
+
+
+@media (min-width: 769px) {
+  .filters {
+    display: flex  !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
+  }
+
+  a .filter {
+    flex: 1 1 auto !important;
+    text-align: center !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+    .tax-toggle {
+        display: none !important;
+    }
+}
+
+
+/* Review Card */
+
+.review-card {
+    padding: 10px !important;
+}
+
+/*For Mobile Navbar*/
+@media (max-width: 768px) {
+    .filter {
+        text-align: center;
+        margin-right: 2rem;
+        margin-top: 5rem;
+        opacity: 0.7;
+    }
+
+    /* Show Page */
+    .show_page, 
+    .edit_page, 
+    .signup_page, 
+    .login_page, 
+    .new_page {
+        margin-top: 5rem !important;
+    }
+
+    .show-img {
+        width: 80%;
+        height: 350px;
+        /* object-fit: cover; */
+        border-radius: 10px;
+    }
+}
