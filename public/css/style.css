@@ -67,6 +67,7 @@ body {
 .card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
+    object-fit: cover;
 }
 
 .card-body {
@@ -107,8 +108,9 @@ body {
 
 /* Show page */
 .show-img {
-    width: 80%;
-    height: 400px;
+    width: 100%;
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -213,7 +215,6 @@ body {
 
 
 /* Review Card */
-
 .review-card {
     padding: 10px !important;
 }
