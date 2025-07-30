@@ -219,6 +219,13 @@ body {
     padding: 10px !important;
 }
 
+@media (min-width: 769px) {
+    .review-cards {
+        display: flex;
+        background-color: #fe424d;
+    }
+}
+
 /*For Mobile Navbar*/
 @media (max-width: 768px) {
     .filter {
@@ -243,4 +250,7 @@ body {
         /* object-fit: cover; */
         border-radius: 10px;
     }
+
+
+
 }
