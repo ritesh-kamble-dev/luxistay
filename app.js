@@ -83,6 +83,17 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use((req, res, next) => {
+    console.log({
+        ip: req.ip,
+        userAgent: req.headers['user-agent'],
+        path: req.originalUrl,
+        time: new Date()
+    });
+    next();
+});
+
+
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
