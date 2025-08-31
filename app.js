@@ -83,26 +83,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// Enable trust proxy so Express respects x-forwarded-for header
-app.set("trust proxy", true);
-
-app.use((req, res, next) => {
-  // Extract IP from x-forwarded-for, fallback to remoteAddress
-  const ip =
-    req.headers["x-forwarded-for"]?.split(",")[0] || req.socket.remoteAddress;
-
-  console.log({
-    ip,
-    userAgent: req.headers["user-agent"],
-    path: req.originalUrl,
-    time: new Date(),
-  });
-
-  next();
-});
-
-
-
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
